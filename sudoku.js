@@ -73,10 +73,11 @@ function setNumbers() {
 }
 
 function setBoard() {
-
+    
     for (let i = 0; i < 9; i++) {
         for (let j = 0; j < 9; j++) {
             let tile = document.createElement('div');
+            tile.style.borderColor = 'white';
             tile.id = i + '-' + j;
 
             if (i % 3 == 0 && i > 0) {
@@ -89,6 +90,7 @@ function setBoard() {
                 tile.addEventListener('click', apply);
                 tile.textContent = '';
             } else {
+                tile.style.backgroundColor = '#D3D3D3';
                 tile.textContent = board[i][j];
             }
             tile.classList.add('tile');
@@ -114,7 +116,7 @@ function apply(e) {
         e.target.textContent = numSelected;
     } else if (numSelected != null) {
         mistakes++;
-        document.getElementById('mistakes').textContent = mistakes;
+        document.getElementById('mistakes').textContent = 'Mistakes: ' + mistakes;
     }
 
     winGame();

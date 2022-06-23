@@ -1,5 +1,5 @@
 body {
-    background-color: #F5F5F5;
+    background-color: #e4e2e2;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 }
@@ -13,6 +13,9 @@ h1 {
     text-shadow: 2px 0 black;
     color: 	#ff2e2e;
     font-size: 30px;
+}
+.mistakes {
+    display: inline;
 }
 
 hr {
@@ -34,7 +37,7 @@ hr {
     width: 48px;
     height: 48px;
     border: 1px solid lightgray;
-
+    cursor: pointer;
     font-size: 20px;
     font-weight: bold;
     display: flex;
